@@ -1,0 +1,9 @@
+name: fmbs
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - rdkit
+  - pip:
+      - '-e .[predict]'

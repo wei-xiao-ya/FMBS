@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use FMBS, please cite this software and the Chemical Checker papers listed in README.md."
+title: "FMBS: Fused Multi-level Bioactivity Similarity target prediction"
+type: software
+authors:
+  - family-names: "Xiao"
+    given-names: "Wei"
+repository-code: "https://github.com/wei-xiao-ya/FMBS"
+version: 0.1.0
+date-released: 2026-09-15

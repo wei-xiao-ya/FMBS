@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Generated predictions and local caches
+outputs/
+*.h5
+
+# Large working copies. The compressed LFS artifact is the distributable copy.
+/data/nonshared_all.csv
+/data/source/

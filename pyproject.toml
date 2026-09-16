@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmbs-target-prediction"
+version = "0.1.0"
+description = "Fused multi-level bioactivity similarity for drug-target prediction"
+readme = "README.md"
+requires-python = ">=3.9,<3.12"
+authors = [{ name = "Wei Xiao" }]
+keywords = ["bioactivity", "drug-target prediction", "chemical checker", "cheminformatics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "numpy>=1.23.5,<2",
+  "pandas>=1.5,<3",
+  "scipy>=1.9,<2",
+]
+
+[project.optional-dependencies]
+predict = [
+  "google-auth==2.47.0",
+  "rdkit>=2022.9",
+  "signaturizer==1.1.16",
+  "tensorflow==2.15.1",
+  "tensorflow-hub==0.16.1",
+  "tf-keras==2.15.1",
+]
+dev = [
+  "pytest>=7,<9",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+fmbs = "fmbs.cli:main"
+
+[project.urls]
+Repository = "https://github.com/wei-xiao-ya/FMBS"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
